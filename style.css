@@ -130,3 +130,24 @@ footer {
         padding: 60px 40px;
     }
 }
+
+/* Text-only secondary link style */
+.btn-text {
+    background-color: transparent;
+    color: #61746a;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-size: 0.8rem;
+}
+
+.btn-text:hover {
+    color: #2c3e35;
+}
+
+/* Adjust button alignment for desktop viewports */
+@media (min-width: 480px) {
+    .cta-container {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
