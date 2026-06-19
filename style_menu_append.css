@@ -1,6 +1,6 @@
 /* =========================================== */
 /* 🌟 NEW NAVIGATION STYLES (Header/Menu) - Appended via script due to tool limitations */
-/* NOTE: This block was designed to append to style.css, but since explicit appending is unreliable, I am providing the full content here for inclusion at the end of style.css. */
+/* NOTE: Please append this entire block to style.css, ideally after line 154. */
 /* =========================================== */
 
 .site-header {
@@ -89,7 +89,7 @@ nav ul {
         display: block; /* Show toggle button on mobile */
     }
 
-    /* Adjust main content padding to account for sticky header if needed (approx 120px) */
+    /* Adjust main content padding to account for sticky header if needed (approx 80px) */
     main.content {
         padding-top: 120px; /* Increased spacing due to larger, fixed header area */
     }
