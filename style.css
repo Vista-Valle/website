@@ -1,96 +1,142 @@
-/* =========================================== */
-/* 🌟 NEW NAVIGATION STYLES (Header/Menu) - Appended via script due to tool limitations */
-/* NOTE: This block was designed to append to style.css, but since explicit appending is unreliable, I am providing the full content here for inclusion at the end of style.css. */
-/* =========================================== */
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-.site-header {
-    background: rgba(255, 255, 255, 0.98); /* Slightly more opaque white for better contrast */
-    padding: 15px 40px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); /* Enhanced shadow for premium feel */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f7f5f0; /* Soft luxury cream background */
+    color: #2c3e35; /* Deep elegant green/earth tone */
+    min-height: 100vh;
     display: flex;
-    justify-content: space-between; /* Puts logo/menu on opposite ends */
+    justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
-/* The logo must be adjusted to fit the new header context */
-.site-header .logo {
-    font-size: 2rem !important; /* Slightly smaller for compact nav bar */
-    margin-bottom: 0 !important;
+/* Layout Container */
+.container {
+    max-width: 650px;
+    width: 100%;
+    text-align: center;
+    background: #ffffff; /* Explicitly setting container background to white on reset */
+    padding: 40px 30px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 35px;
-    align-items: center;
+/* Typography & Content */
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
 }
 
-.menu-list li a.nav-link {
-    text-decoration: none;
-    color: #2c3e35;
-    font-weight: 500;
+.tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #61746a;
     letter-spacing: 1px;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
-.menu-list li a.nav-link:hover {
-    color: #a38a5e; /* Gold hover effect */
-    border-bottom: 2px solid #a38a5e;
+.divider {
+    border: 0;
+    height: 1px;
+    background: #e0dcd3;
+    margin: 30px auto;
+    width: 60%;
 }
 
-/* Mobile Toggle Button Styling (Hamburger) */
-.menu-toggle {
-    display: none; /* Hidden by default on desktop */
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    cursor: pointer;
-    padding: 5px;
-    line-height: 1;
+h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: #a38a5e; /* Subdued gold highlight */
+    margin-bottom: 15px;
 }
 
-/* Mobile Menu Drawer Styling (hidden by default) */
-@media (max-width: 1024px) {
-    /* Adjust header padding for mobile view */
-    .site-header {
-        padding: 15px 20px;
+.description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555555;
+    margin-bottom: 35px;
+    font-weight: 300;
+}
+
+/* Call to Action Buttons */
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #2c3e35;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #3d564a;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    font-size: 0.75rem;
+    color: #999999;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (min-width: 480px) {
+    .cta-container {
+        flex-direction: row;
+        justify-content: center;
     }
 
-    /* Hide the main menu links and show the toggle button */
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* Must match header height minus padding */
-        left: 0;
-        width: 100%;
-        background: #ffffff;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        padding: 20px 0;
-        text-align: center;
+    .logo {
+        font-size: 3.5rem;
     }
 
-    /* Show menu links when the parent header has 'menu-open' class */
-    .site-header.menu-open nav ul {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
+    .container {
+        padding: 60px 40px;
     }
+}
 
-    /* Make sure the logo remains visible but adjust size */
-    .site-header .logo {
-        font-size: 2.5rem !important;
-    }
+/* Text-only secondary link style */
+.btn-text {
+    background-color: transparent;
+    color: #61746a;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-size: 0.8rem;
+}
 
-    .menu-toggle {
-        display: block; /* Show toggle button on mobile */
-    }
+.btn-text:hover {
+    color: #2c3e35;
+}
 
-    /* Adjust main content padding to account for sticky header if needed (approx 120px) */
-    main.content {
-        padding-top: 120px; /* Increased spacing due to larger, fixed header area */
+/* Adjust button alignment for desktop viewports */
+@media (min-width: 480px) {
+    .cta-container {
+        flex-wrap: wrap;
+        align-items: center;
     }
 }
